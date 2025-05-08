@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a webpage</title>
+    <script src="src/main.ts" type="module"></script>
+</head>
+<body>
+    <main class="container-fluid my-2 flex-column gap-2 d-flex">
+        <h1>Webpage creator</h1>
+        <div class="container-fluid flex-fill my-2 d-flex flex-column gap-2 align-content-stretch">
+            <div class="mb-2 d-flex spacer-between">
+                <div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="mode" id="mode-edit" autocomplete="off" checked>
+                        <label class="form-check-label" for="mode-edit">Edit</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="mode" id="mode-inspect" autocomplete="off">
+                        <label class="form-check-label" for="mode-inspect">Inspect</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="mode" id="mode-move" autocomplete="off">
+                        <label class="form-check-label" for="mode-move">Move</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="theme" id="theme-light" autocomplete="off" checked>
+                        <label for="theme-light" class="form-check-label">Light</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="theme" id="theme-dark" autocomplete="off">
+                        <label for="theme-dark" class="form-check-label">Dark</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="theme" id="theme-auto" autocomplete="off">
+                        <label for="theme-auto" class="form-check-label">Auto</label>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 container flex-wrap elements">
+                    <button class="element btn" data-tag="img" data-class="img-fluid" data-attributes='{"src": "https://placehold.co/600x400@2x.png", "alt": "Placeholder image"}'>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6l96 0 32 0 208 0c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+                        Image
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                    </button>
+                </div>
+                <!-- TODO
+                <div class="w-minc d-none">
+                    <label for="accent-color" class="form-check-label">Accent Color</label>
+                    <input type="color" id="accent-color" class="form-control form-control-color" value="#563d7c">
+                </div>
+                -->
+            </div>
+            <div class="mb-2 d-flex w-100 flex-fill align-content-stretch">
+                <div id="webpage" class="webpage border border-1 rounded flex-fill p-2 bg-body text-body focus-ring" contenteditable="true">
+                    
+                </div>
+                <div id="properties-scale"></div>
+                <div id="properties" class="properties border border-1 border-dark-subtle rounded p-2 d-none">
+                    <h2>Properties</h2>
+                    <div id="properties-content"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
