@@ -20,6 +20,10 @@ body {
     width: $spacer;
     cursor: ew-resize;
 }
+.properties > h2 {
+    margin: 0;
+    line-height: 1em;
+}
 
 .webpage[data-inspect="true"] ~ #properties-scale:has(
     + .properties #properties-content:not(:empty)

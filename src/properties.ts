@@ -8,6 +8,9 @@ const propertiesContentsElem = document.getElementById(
 const draggerElem = document.getElementById(
     "properties-scale"
 ) as HTMLDivElement;
+const propertiesInfoElem = document.getElementById(
+    "properties-info"
+) as HTMLElement;
 
 draggerElem.addEventListener("pointerdown", (e) => {
     e.preventDefault();
@@ -258,6 +261,7 @@ function getProperties(element: HTMLElement): Record<string, AnyProperty> {
 function renderProps(element: HTMLElement) {
     propertiesContentsElem.innerHTML = "";
     const props = getProperties(element);
+    propertiesInfoElem.textContent = `<${element.tagName.toLowerCase()}> ${element.dataset.id}`;
     for (const [name, prop] of Object.entries(props)) {
         const propElem = document.createElement("div");
         propElem.className = "property mb-3";
